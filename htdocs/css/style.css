@@ -417,8 +417,36 @@ template {
 /**
  * Regions, basics to show off the regions.
  */
+html {
+  background-color: #d0fafa;
+}
+.wrap-all {
+  margin: 0 auto;
+  max-width: 950px;
+}
 .site-header {
   position: relative;
+  height: 80px;
+}
+.site-logo-text,
+.navbar2,
+.profile {
+  float: left;
+  width: 30%;
+}
+.site-logo-text {
+  font-size: 2em;
+}
+.site-logo-text a {
+  text-decoration: none;
+  color: black;
+}
+.navbar2 {
+  text-decoration: none;
+  font-weight: bold;
+}
+.selected-parent {
+  text-decoration: underline;
 }
 .breadcrumb {
   margin-bottom: 22px;
@@ -434,25 +462,81 @@ template {
 .breadcrumb li::after {
   content: " » ";
 }
+.main {
+  padding-bottom: 11px;
+  min-height: 100px;
+}
 .main .has-sidebar {
   width: 67%;
   float: left;
 }
+.next-previous .next,
+.next-previous .previous {
+  width: 50%;
+}
+.next-previous .next {
+  float: right;
+  text-align: right;
+}
+.outer-wrap-main {
+  min-height: 250px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.sidebar {
+  width: 33%;
+  float: left;
+}
+img.testbild {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.after-main {
+  overflow: auto;
+  margin: auto;
+  max-width: 410px;
+}
+.after-main img {
+  float: right;
+  max-width: 20%;
+}
+.inner-wrap-after-main {
+  margin: 5px 30px 5px 30px ;
+  border-top: 1px solid #bebebe;
+}
 .footer-column {
   float: left;
-  width: 33%;
+  width: 32%;
 }
 .footer-column ul {
   margin: 0;
   padding: 1em;
   list-style-type: circle;
 }
+.footer-column-2,
+.footer-column-3 {
+  border-left: 1px solid #3F4C4C;
+}
+.footer-column-x {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+/*
+.footer-column-2 {
+    border-left: 1px solid @htmlbackgroundcolor;
+    border-right: 1px solid @htmlbackgroundcolor;
+}
+*/
 .footer-column-wrapper {
   overflow: auto;
+  border-bottom: 1px solid #3F4C4C;
 }
 .outer-wrap-footer {
   clear: both;
-  margin-bottom: 22px;
+  padding: 11px 5px 22px 5px;
+  background-color: #576969;
 }
 .site-footer {
   text-align: center;
@@ -464,22 +548,6 @@ template {
 }
 .site-footer li {
   display: inline;
-}
-.wrap-all {
-  margin: 0 auto;
-  max-width: 950px;
-}
-.sidebar {
-  width: 33%;
-  float: left;
-}
-.next-previous .next,
-.next-previous .previous {
-  width: 50%;
-}
-.next-previous .next {
-  float: right;
-  text-align: right;
 }
 /**
  * Style for responsive menu
@@ -571,7 +639,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  * Menu layout for the desktop variant, usually full width of browser.
  */
 .rm-desktop ul {
-  background-color: #eee;
+  background-color: inherit;
 }
 .rm-desktop li {
   position: relative;
@@ -582,7 +650,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-desktop li a {
   color: inherit;
-  background-color: #eee;
+  background-color: inherit;
 }
 .rm-desktop li a:hover {
   color: inherit;
@@ -711,22 +779,6 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 /** --------------------------------------------------------------
  *  Header
  */
-.site-header {
-  height: 80px;
-}
-.site-logo-text,
-.navbar2,
-.profile {
-  float: left;
-  width: 30%;
-}
-.site-logo-text {
-  font-size: 2em;
-}
-.site-logo-text a {
-  text-decoration: none;
-  color: black;
-}
 /** --------------------------------------------------------------
  *  Logo images
  */
@@ -753,6 +805,29 @@ img {
   }
   .profile {
     width: 10%;
+  }
+}
+@media screen and (max-width: 710px) {
+  .footer-column {
+    width: 100%;
+  }
+  .footer-column-1 {
+    border-bottom: 1px solid #3F4C4C;
+  }
+  .footer-column-2 {
+    border-left: 0;
+    border-bottom: 1px solid #3F4C4C;
+  }
+  .footer-column-3 {
+    border-left: 0;
+  }
+  .sidebar {
+    width: 100%;
+    float: none;
+  }
+  .main .has-sidebar {
+    width: 100%;
+    float: left;
   }
 }
 @media screen and (max-width: 560px) {

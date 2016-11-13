@@ -2,13 +2,69 @@
  * Regions, basics to show off the regions.
  */
 
- // siteheader --------------
+// Variabler
 
- .site-header {
+//@htmlbackgroundcolor: #D0FAFA;
+@htmlbackgroundcolor: #d0fafa;
+
+@bylineborders: #bebebe;
+
+//@footerbordersinside: #bebebe;
+@footerbordersinside: #3F4C4C;
+@footerbackgroundcolor: #576969;
+
+
+// html -----------------
+
+html {
+    background-color: @htmlbackgroundcolor;
+}
+
+
+
+// body ------------------
+
+.wrap-all {
+    margin: 0 auto;
+    max-width: 950px;
+}
+
+// siteheader --------------
+
+.site-header {
      position: relative;
- }
+     height: 80px;
+}
+
+.site-logo-text,
+.navbar2,
+.profile {
+    float: left;
+    width: 30%;
+}
+
+.site-logo-text {
+    font-size: 2em;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+
 
 // navbar --------------
+//@navbarItemBgColor: #B4FAFA;
+//@navbarItemBgColor: #eee;
+.navbar2 {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.selected-parent {
+    text-decoration: underline;
+}
 
 // flash --------------
 
@@ -37,13 +93,67 @@
 
 // main --------------
 
+.main {
+    padding-bottom: 11px;
+    min-height: 100px;
+}
+
 .main .has-sidebar {
     width: 67%;
     float: left;
 }
 
+.next-previous {
+    .next,
+    .previous {
+        width: 50%;
+    }
+
+    .next {
+        float: right;
+        text-align: right;
+    }
+}
+
+.outer-wrap-main {
+    min-height: 250px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.sidebar {
+    width: 33%;
+    float: left;
+}
+
+img.testbild {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 // after-main --------------
+
+.after-main {
+    overflow: auto;
+    //padding: top right bottom left;
+    margin: auto;
+    //border-top: 1px solid @bylineborders;
+    //border-bottom: 1px solid @bylineborders;
+    max-width: 410px;
+
+    img {
+        float: right;
+        max-width: 20%;
+    }
+}
+
+.inner-wrap-after-main {
+    margin: 5px 30px 5px 30px ;
+    border-top: 1px solid @bylineborders;
+}
 
 // columns-below --------------
 
@@ -51,7 +161,7 @@
 
 .footer-column {
     float: left;
-    width: 33%;
+    width: 32%;
 
     ul {
         margin: 0;
@@ -60,13 +170,36 @@
     }
 }
 
+.footer-column-2,
+.footer-column-3 {
+    border-left: 1px solid @footerbordersinside;
+}
+
+.footer-column-x {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+/*
+.footer-column-2 {
+    border-left: 1px solid @htmlbackgroundcolor;
+    border-right: 1px solid @htmlbackgroundcolor;
+}
+*/
+
 .footer-column-wrapper {
     overflow: auto;
+    border-bottom: 1px solid @footerbordersinside;
 }
 
 .outer-wrap-footer {
     clear: both;
-    margin-bottom: 22px;
+    //margin-bottom: 22px;
+    //padding-top: 11px;
+    //padding-bottom: 22px;
+
+    //padding: top right bottom left;
+    padding: 11px 5px 22px 5px;
+    background-color: @footerbackgroundcolor;
 }
 
 .site-footer {
@@ -80,30 +213,5 @@
 
     li {
         display: inline;
-    }
-}
-
-
-// others?? Where to put?
-
-.wrap-all {
-    margin: 0 auto;
-    max-width: 950px;
-}
-
-.sidebar {
-    width: 33%;
-    float: left;
-}
-
-.next-previous {
-    .next,
-    .previous {
-        width: 50%;
-    }
-
-    .next {
-        float: right;
-        text-align: right;
     }
 }

@@ -9,28 +9,7 @@
  *  Header
  */
 
- .site-header {
-     height: 80px;
- }
-
-.site-logo-text,
-.navbar2,
-.profile {
-    float: left;
-    width: 30%;
-}
-
-.site-logo-text {
-    font-size: 2em;
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-}
-
 // Navbar main
-@navbarItemBgColor: #eee;
 
 
 // Max menu
@@ -73,6 +52,35 @@ img {
 
     .profile {
         width: 10%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .footer-column {
+        width: 100%;
+    }
+
+    .footer-column-1 {
+        border-bottom: 1px solid @footerbordersinside;
+    }
+
+    .footer-column-2 {
+        border-left: 0;
+        border-bottom: 1px solid @footerbordersinside;
+    }
+
+    .footer-column-3 {
+        border-left: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        float: none;
+    }
+
+    .main .has-sidebar {
+        width: 100%;
+        float: left;
     }
 }
 
