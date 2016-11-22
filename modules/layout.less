@@ -1,0 +1,403 @@
+/*
+ * Styling for Anax Flat using a vertical grid with max-size 960px
+ * and 12 columns.
+ *
+ *
+ */
+
+// Variables
+@htmlbackgroundcolor: #d0fafa;
+
+@bylineborders: #bebebe;
+
+@footerbordersinside: #3F4C4C;
+@footerbackgroundcolor: #576969;
+
+
+// html -----------------
+
+//body {
+//    .font();
+//}
+
+.route-,
+.route-report,
+.route-report-intro,
+.route-report-kmom01,
+.route-report-kmom02,
+.route-report-kmom03,
+.route-report-kmom04,
+.route-report-kmom05,
+.route-report-kmom06,
+.route-report-kmom10,
+.route-about,
+.route-test {
+    background-color: @htmlbackgroundcolor;
+}
+
+.route-grid {
+    .wrap-all {
+        .showGrid(960px);
+    }
+}
+
+.route-typography {
+    .wrap-all {
+        .showTypoGrid();
+        //background-image: url(img/horisontal-grid-24.png);
+        //background-image: url(../img/grid/horisontal-grid-24.png);
+        //background-color: #FFE6D5;
+    }
+}
+
+.wrap-all {
+    .font();
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+}
+
+.inner-wrap {
+    .container();
+    max-width: 960px;
+}
+
+.row {
+    .row();
+}
+
+
+// Header
+
+.header {
+    .column(@columns);
+}
+
+.navbar2 {
+    .column(6);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile {
+    .column(2);
+}
+
+.selected,
+.selected-parent {
+    text-decoration: underline;
+}
+
+.site-header {
+    height: 3 * @magicNumber;
+    //.fontSize(3);
+}
+
+.site-logo-text {
+    .column(4);
+    font-size: 2em;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+// flash --------------
+.flash-wrap {
+    .column(@columns);
+    //min-height: 10 * @magicNumber;
+    margin-bottom: 2px;
+}
+
+// Breadcrumb
+
+//.bredcrumb-wrap {
+//    height: 2 * @magicNumber auto;
+//}
+//.outer-wrap-breadcrumb {
+//    margin-bottom: 32px;
+//}
+
+/*
+.route-typography {
+    .breadcrumb-wrap {
+        display: none;
+    }
+}*/
+
+// Main-delen
+
+img.testbild {
+    display: block;
+    //margin-left: auto;
+    //margin-right: auto;
+    width: 200px;
+}
+
+.main {
+    margin-bottom: 1em;
+    .column(@columns * 3 / 4 - 2);
+    .push(1);
+
+    &.has-sidebar-left {
+        .column(@columns * 3 / 4);
+        //.push(0);
+    }
+    &.has-sidebar-right {
+        .column(@columns * 3 / 4);
+        .push(1);
+    }
+
+    &.has-sidebar-left.has-sidebar-right {
+        .column(@columns * 2 / 4 + 2);
+        .push(0);
+    }
+}
+
+.next {
+    .column(3);
+    text-align: right;
+    float: right;
+}
+
+.previous {
+    .column(3);
+}
+
+.sidebar-right,
+.sidebar-left {
+    .column(@columns / 4 - 1);
+}
+
+//.ul {
+//    .typographyListElements();
+//}
+
+// After-main (Byline)
+.after-main {
+    .column(@columns * 2 / 4 - 0);
+    .push(3);
+}
+
+.after-main img {
+    float: right;
+    overflow: auto;
+    max-width: 20%;
+}
+
+/*.inner-wrap-after-main {
+    .column(@columns - 2);
+    .push(1);
+    border-top: 1px solid @bylineborders;
+    //margin: 5px 30px;
+}*/
+
+.inner-wrap-after-main {
+    //.column(@columns);
+    //.push(0);
+    border-top: 1px solid @bylineborders;
+}
+
+// Footer ----------------------------------------
+
+.footer-column {
+    float: left;
+    .column(@columns * 1 / 3);
+    //width: 32%;
+
+    ul {
+        margin: 0;
+        padding: 1em;
+        list-style-type: circle;
+    }
+}
+
+
+//.footer-column-1 {
+    //.column(@columns * 1 / 3);
+    //.push(0);
+//}
+
+.footer-column-2 {
+    //.column(@columns * 1 / 3);
+    //.push(0);
+    border-left: 1px solid @footerbordersinside;
+}
+
+.footer-column-3 {
+    //.column(@columns * 1 / 3);
+    //.push(0);
+    border-left: 1px solid @footerbordersinside;
+}
+
+.footer-column-wrapper {
+    overflow: auto;
+}
+
+.footer-column-x {
+    padding-left: 6px;
+}
+
+.inner-wrap-footer {
+    clear: both;
+    //padding: top right bottom left;
+    //padding: 11px 5px 22px 5px;
+    background-color: @footerbackgroundcolor;
+}
+
+
+.site-footer {
+    .column(@columns - 2);
+    .push(1);
+    text-align: center;
+    border-top: 1px solid @footerbordersinside;
+    li {
+        display: inline;
+    }
+}
+
+
+// Media queries ....
+@media screen and (max-width: 960px) {
+    .site-logo-text {
+        .column(4);
+        //width: 40%;
+    }
+
+    .navbar2 {
+        .column(7);
+        //width: 50%;
+    }
+
+    .profile {
+        .column(1);
+        //width: 10%;
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .main {
+        .column(@columns * 3 / 4 - 1);
+        .push(1);
+
+        &.has-sidebar-left {
+            .column(@columns * 3 / 4 - 1);
+            .push(1);
+        }
+        &.has-sidebar-right {
+            .column(@columns * 3 / 4 - 1);
+            .push(1);
+        }
+
+        &.has-sidebar-left.has-sidebar-right {
+            .column(@columns * 2 / 4 + 2);
+            .push(0);
+        }
+    }
+
+    .sidebar-right {
+        .column(@columns / 4);
+    }
+
+    .site-logo-text {
+        .column(10);
+        //width: 40%;
+    }
+
+    .navbar2 {
+        display: none;
+        //.column(0);
+        //width: 50%;
+    }
+
+    .profile {
+        .column(2);
+        //width: 10%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .footer-column {
+        .column(@columns);
+        //width: 100%;
+    }
+
+    .footer-column-1 {
+        border-bottom: 1px solid @footerbordersinside;
+    }
+
+    .footer-column-2 {
+        border-left: 0;
+        border-bottom: 1px solid @footerbordersinside;
+    }
+
+    .footer-column-3 {
+        border-left: 0;
+    }
+
+    .main {
+        .column(@columns * 3 / 4 + 1);
+        .push(1);
+
+        &.has-sidebar-left {
+            .column(@columns * 3 / 4 + 1);
+            .push(1);
+        }
+        &.has-sidebar-right {
+            .column(@columns * 3 / 4 + 1);
+            .push(1);
+        }
+
+        &.has-sidebar-left.has-sidebar-right {
+            .column(@columns * 2 / 4 + 2);
+            .push(0);
+        }
+    }
+
+    .next {
+        .column(5);
+        text-align: right;
+        float: right;
+    }
+
+    .previous {
+        .column(5);
+    }
+
+
+    .sidebar {
+        .column(@columns);
+        //width: 100%;
+        float: none;
+    }
+
+    .sidebar-right {
+        .column(@columns - 2);
+        .push(1);
+        //width: 100%;
+        float: left;
+        border-top: 1px solid @bylineborders;
+    }
+
+    /*.main .has-sidebar {
+        .column(@columns);
+        //width: 100%;
+        float: left;
+    }*/
+}
+
+//@media screen and (max-width: 560px) {
+    /*.site-logo-text {
+        width: 90%;
+    }*/
+
+    /*.navbar2 {
+        display: none;
+    }*/
+//}

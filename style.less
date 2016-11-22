@@ -5,6 +5,9 @@
 
 
 
+
+
+
 /** --------------------------------------------------------------
  *  Header
  */
@@ -15,6 +18,11 @@
 // Max menu
 @maxButtonFontSize: 2em;
 
+/*.rm-max {
+    &.rm-navbar {
+        right: ((@gridSystemWidth * 4) / @columnWidth);
+    }
+}*/
 
 
 /** --------------------------------------------------------------
@@ -41,55 +49,5 @@ img {
     max-width: 100%;
 }
 
-@media screen and (max-width: 900px) {
-    .site-logo-text {
-        width: 40%;
-    }
 
-    .navbar2 {
-        width: 50%;
-    }
-
-    .profile {
-        width: 10%;
-    }
-}
-
-@media screen and (max-width: 710px) {
-    .footer-column {
-        width: 100%;
-    }
-
-    .footer-column-1 {
-        border-bottom: 1px solid @footerbordersinside;
-    }
-
-    .footer-column-2 {
-        border-left: 0;
-        border-bottom: 1px solid @footerbordersinside;
-    }
-
-    .footer-column-3 {
-        border-left: 0;
-    }
-
-    .sidebar {
-        width: 100%;
-        float: none;
-    }
-
-    .main .has-sidebar {
-        width: 100%;
-        float: left;
-    }
-}
-
-@media screen and (max-width: 560px) {
-    .site-logo-text {
-        width: 90%;
-    }
-
-    .navbar2 {
-        display: none;
-    }
-}
+@footerbordersinside: #3F4C4C;
