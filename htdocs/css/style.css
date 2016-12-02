@@ -431,7 +431,10 @@ template {
 .route-report-kmom06,
 .route-report-kmom10,
 .route-about,
-.route-test {
+.route-test,
+.route-analysis,
+.route-analysis-intro,
+.route-analysis-colorscheme {
   background-color: #d0fafa;
 }
 .route-grid .wrap-all {
@@ -723,7 +726,7 @@ template {
   top: -0.7em;
   left: 50%;
   padding: 0 0.25em;
-  background-color: #fff;
+  background-color: #d0fafa;
 }
 .inner-wrap {
   margin-right: auto;
@@ -751,7 +754,7 @@ template {
 .navbar2 {
   display: inline;
   float: left;
-  width: 47.91666667%;
+  width: 56.25%;
   margin-left: 1.04166667%;
   margin-right: 1.04166667%;
   text-decoration: none;
@@ -760,7 +763,7 @@ template {
 .profile {
   display: inline;
   float: left;
-  width: 14.58333333%;
+  width: 6.25%;
   margin-left: 1.04166667%;
   margin-right: 1.04166667%;
 }
@@ -919,25 +922,21 @@ img.testbild {
 .site-footer li {
   display: inline;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 850px) {
   .site-logo-text {
     display: inline;
     float: left;
-    width: 31.25%;
+    width: 81.25%;
     margin-left: 1.04166667%;
     margin-right: 1.04166667%;
   }
   .navbar2 {
-    display: inline;
-    float: left;
-    width: 56.25%;
-    margin-left: 1.04166667%;
-    margin-right: 1.04166667%;
+    display: none;
   }
   .profile {
     display: inline;
     float: left;
-    width: 6.25%;
+    width: 14.58333333%;
     margin-left: 1.04166667%;
     margin-right: 1.04166667%;
   }
@@ -1702,7 +1701,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   top: -0.7em;
   left: 50%;
   padding: 0 0.25em;
-  background-color: #fff;
+  background-color: #d0fafa;
 }
 /** --------------------------------------------------------------
  *  Header

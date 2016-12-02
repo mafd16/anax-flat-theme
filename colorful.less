@@ -1,0 +1,213 @@
+/**
+* Anax Flat theme.
+*/
+
+// ---- COLORFUL THEME ------- //
+
+@color1:  #0094FF; // BLUE
+@color2:  #FFFF00; // YELLOW
+@color3:  #FF1914; // RED
+@color4:  #B2B228; // Darker YELLOW
+@color5:  #B20C09; // Darker RED
+
+// Style.LESS
+//@import url(style.less);
+
+// Reset, or normalize the browser style
+@import url(normalize.less);
+
+// Basic region structure
+//@import url(regions.less);
+@import url(layout.less);
+
+// Responsive menu
+@import url(responsive-menu.less);
+
+// Grid flex
+//@import url(grid-flex.less);
+
+// Grid float
+@import url(grid-float.less);
+
+// Grid helpers
+@import url(grid-helpers.less);
+
+// Typography
+@import url(typography.less);
+
+// Analysis
+//@import url(analysis.less);
+
+
+@htmlbackgroundcolor: @color1;
+
+
+
+@bylineborders: @color2;
+
+@footerbordersinside: @color4;
+@footerbackgroundcolor: @color3;
+
+@colorH1BorderBottom: @color2;
+@colorH2BorderBottom: @color2;
+
+/**
+ * Text elements
+ */
+@colorTypographyMark: @color5;
+@bgColorTypographyMark:  #ffff99;
+
+@colorBlockquoteBorder: #eee;
+@sizeBlockquoteBorder: 4px;
+/**
+ * Display source code.
+ */
+@borderColorCodeInline: #ccc;
+@bgColorCodeInline:     #eee;
+@bgColorCodeBlock:      #eee;
+@colorCodeBlockBorder:  #ccc;
+@borderSizeCodeblock:   1px;
+/**
+ * Tables. Because of the need for padding on TH and TD, the vertical rhythm
+ * on table cells has to be 1.5*@magic-number.
+ */
+@colorTableHeaderBorder:    @color5;
+@sizeTableHeaderBorder:     2px;
+
+@bgColorTableStripe:        #fafafa;
+@colorTableRowBorder:       @color5;
+
+@colorTableRowHover:        #000;
+@bgColorTableRowHover:      #f6f6f6;
+@colorTableRowBorderHover:  #666;
+/**
+ * More typography elements
+ */
+//@bgColorHr: #fff;
+@bgColorHr: @htmlbackgroundcolor;
+
+
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+// Navbar
+
+
+
+// Max menu
+@maxButtonFontSize: 2em;
+
+/*.rm-max {
+    &.rm-navbar {
+        right: ((@gridSystemWidth * 4) / @columnWidth);
+    }
+}*/
+
+
+/** --------------------------------------------------------------
+ *  Logo images
+ */
+.logo-1 {
+    position: absolute;
+    top: 70px;
+    left: -140px;
+}
+
+.site-logo-text-icon {
+    img {
+        vertical-align: bottom;
+    }
+}
+
+// Header
+
+.site-logo-text {
+    a {
+        text-decoration: none;
+        color: @color5;
+    }
+}
+
+.rm-desktop li a {
+    background-color: inherit;
+    color: @color5;
+}
+
+.rm-desktop li a:hover {
+    background-color: inherit;
+    color: @color5;
+}
+
+.rm-max .rm-small .rm-button {
+    color: @color5;
+    //font-size: 2em;
+}
+
+.rm-max .rm-small .rm-button.rm-clicked {
+    color: @color5;
+}
+
+.rm-mobile {
+    color: @color5;
+}
+
+.selected, .selected-parent {
+    text-decoration: underline;
+    text-decoration-color: @color5;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+pre,
+legend {
+    color: @color5;
+}
+
+.wrap-all code {
+    background-color: @color2;
+}
+.wrap-all code, .wrap-all samp {
+    border: 1px solid @color4;
+}
+
+// After main
+
+
+.route-grid {
+    .wrap-all {
+        .showGrid(960px);
+    }
+}
+
+.route-typography {
+    .wrap-all {
+        .showTypoGrid();
+        //background-image: url(img/horisontal-grid-24.png);
+        //background-image: url(../img/grid/horisontal-grid-24.png);
+        //background-color: #FFE6D5;
+    }
+}
+
+
+
+
+/** --------------------------------------------------------------
+ *  Responsive design
+ */
+img {
+    max-width: 100%;
+}
+
+
+//@footerbordersinside: #3F4C4C;

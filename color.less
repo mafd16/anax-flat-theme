@@ -1,0 +1,132 @@
+/**
+* Anax Flat theme.
+*/
+
+// ---- COLOR THEME ------- //
+
+// Color 1:  #7F3C3B Dark
+// Color 2:  #FFC3C2 Very bright
+// Color 3:  #FF7876 Almost pink
+// Color 4:  #7F6261 Sort of grey
+// Color 5:  #CC605E Darker pink
+
+@color1:  #7F3C3B; // Dark
+@color2:  #FFC3C2; // Very bright
+@color3:  #FF7876; // Almost pink
+@color4:  #7F6261; // Sort of grey
+@color5:  #CC605E; // Darker pink
+
+
+// Style.LESS
+//@import url(style.less);
+
+// Reset, or normalize the browser style
+@import url(normalize.less);
+
+// Basic region structure
+//@import url(regions.less);
+@import url(layout.less);
+
+// Responsive menu
+@import url(responsive-menu.less);
+
+// Grid flex
+//@import url(grid-flex.less);
+
+// Grid float
+@import url(grid-float.less);
+
+// Grid helpers
+@import url(grid-helpers.less);
+
+// Typography
+@import url(typography.less);
+
+// Analysis
+//@import url(analysis.less);
+
+
+@htmlbackgroundcolor: #FFF;
+
+
+
+@bylineborders: @color3;
+
+@footerbordersinside: @color3;
+@footerbackgroundcolor: @color4;
+
+@colorH1BorderBottom: @color3;
+@colorH2BorderBottom: @color3;
+
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+// Navbar
+
+
+
+// Max menu
+@maxButtonFontSize: 2em;
+
+/*.rm-max {
+    &.rm-navbar {
+        right: ((@gridSystemWidth * 4) / @columnWidth);
+    }
+}*/
+
+
+/** --------------------------------------------------------------
+ *  Logo images
+ */
+.logo-1 {
+    position: absolute;
+    top: 70px;
+    left: -140px;
+}
+
+.site-logo-text-icon {
+    img {
+        vertical-align: bottom;
+    }
+}
+
+.site-logo-text {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+
+
+
+
+.route-grid {
+    .wrap-all {
+        .showGrid(960px);
+    }
+}
+
+.route-typography {
+    .wrap-all {
+        .showTypoGrid();
+        //background-image: url(img/horisontal-grid-24.png);
+        //background-image: url(../img/grid/horisontal-grid-24.png);
+        //background-color: #FFE6D5;
+    }
+}
+
+
+
+
+/** --------------------------------------------------------------
+ *  Responsive design
+ */
+img {
+    max-width: 100%;
+}
+
+
+//@footerbordersinside: #3F4C4C;

@@ -31,7 +31,15 @@
 .route-report-kmom06,
 .route-report-kmom10,
 .route-about,
-.route-test {
+.route-test,
+.route-analysis,
+.route-analysis-intro,
+.route-analysis-colorscheme,
+.route-theme,
+.route-theme-selector,
+.route-contact,
+.route-cookies,
+.route-license {
     background-color: @htmlbackgroundcolor;
 }
 
@@ -77,13 +85,13 @@
 }
 
 .navbar2 {
-    .column(6);
+    .column(8);
     text-decoration: none;
     font-weight: bold;
 }
 
 .profile {
-    .column(2);
+    .column(1);
 }
 
 .selected,
@@ -97,7 +105,7 @@
 }
 
 .site-logo-text {
-    .column(4);
+    .column(3);
     font-size: 2em;
 
     a {
@@ -262,19 +270,20 @@ img.testbild {
 
 
 // Media queries ....
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 890px) {
     .site-logo-text {
-        .column(4);
+        .column(10);
         //width: 40%;
     }
 
     .navbar2 {
-        .column(7);
+        display: none;
+        //.column(7);
         //width: 50%;
     }
 
     .profile {
-        .column(1);
+        .column(2);
         //width: 10%;
     }
 }

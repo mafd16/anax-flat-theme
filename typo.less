@@ -1,0 +1,102 @@
+/**
+* Anax Flat theme.
+*/
+
+// ---- TYPOGRAPHY THEME ------- //
+
+
+@import url(modules.less);
+
+// Fonts to use
+
+// For headings maybe!
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
+// font-family: 'Alegreya', serif;
+
+// For site-logo-text
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+// font-family: 'Permanent Marker', cursive;
+
+// For navbar!
+@import url('https://fonts.googleapis.com/css?family=Exo:900');
+// font-family: 'Exo', sans-serif;
+
+// For paragraphs
+@import url('https://fonts.googleapis.com/css?family=Actor');
+// font-family: 'Actor', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Amaranth');
+// font-family: 'Amaranth', sans-serif;
+
+
+
+
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+// Navbar main
+
+
+// Max menu
+@maxButtonFontSize: 2em;
+
+/*.rm-max {
+    &.rm-navbar {
+        right: ((@gridSystemWidth * 4) / @columnWidth);
+    }
+}*/
+
+
+/** --------------------------------------------------------------
+ *  Logo images
+ */
+.logo-1 {
+    position: absolute;
+    top: 70px;
+    left: -140px;
+}
+
+.site-logo-text-icon {
+    img {
+        vertical-align: bottom;
+    }
+}
+
+.site-logo-text {
+    a {
+        font-family: 'Permanent Marker', cursive;
+    }
+}
+
+.navbar2 {
+    font-family: 'Exo', sans-serif;
+}
+
+.wrap-all h1,
+.wrap-all h2,
+.wrap-all h3,
+.wrap-all h4,
+.wrap-all h5,
+.wrap-all h6 {
+    font-family: 'Alegreya', serif;
+}
+
+p,
+ul,
+li,
+pre,
+legend {
+    font-family: 'Amaranth', sans-serif;
+}
+
+/** --------------------------------------------------------------
+ *  Responsive design
+ */
+img {
+    max-width: 100%;
+}
+
+
+@footerbordersinside: #3F4C4C;
