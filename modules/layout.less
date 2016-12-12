@@ -6,12 +6,15 @@
  */
 
 // Variables
-@htmlbackgroundcolor: #d0fafa;
+//@htmlbackgroundcolor: #d0fafa;
+@htmlbackgroundcolor: #FFFFFF;
+
 
 @bylineborders: #bebebe;
 
 @footerbordersinside: #3F4C4C;
-@footerbackgroundcolor: #576969;
+//@footerbackgroundcolor: #576969;
+@footerbackgroundcolor: #909090;
 
 
 // html -----------------
@@ -20,6 +23,7 @@
 //    .font();
 //}
 
+/*
 .route-,
 .route-report,
 .route-report-intro,
@@ -35,13 +39,22 @@
 .route-analysis,
 .route-analysis-intro,
 .route-analysis-colorscheme,
+.route-analysis-speed-and-usability,
 .route-theme,
 .route-theme-selector,
 .route-contact,
 .route-cookies,
-.route-license {
+.route-license,
+.route-images,
+.route-blogg {
     background-color: @htmlbackgroundcolor;
 }
+*/
+
+body {
+    background-color: @htmlbackgroundcolor;
+}
+
 
 .route-grid {
     .wrap-all {
@@ -85,13 +98,13 @@
 }
 
 .navbar2 {
-    .column(8);
+    .column(7);
     text-decoration: none;
     font-weight: bold;
 }
 
 .profile {
-    .column(1);
+    .column(2);
 }
 
 .selected,
