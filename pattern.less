@@ -1,0 +1,215 @@
+/**
+* Anax Flat theme.
+*/
+@import url(modules.less);
+
+// Style.LESS
+//@import url(style.less);
+
+
+
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+// Navbar main
+
+
+// Max menu
+@maxButtonFontSize: 2em;
+
+/*.rm-max {
+    &.rm-navbar {
+        right: ((@gridSystemWidth * 4) / @columnWidth);
+    }
+}*/
+
+
+/** --------------------------------------------------------------
+ *  Logo images
+ */
+.logo-1 {
+    position: absolute;
+    top: 70px;
+    left: -140px;
+}
+
+.site-logo-text-icon {
+    img {
+        vertical-align: bottom;
+    }
+}
+
+
+
+/** --------------------------------------------------------------
+ *  Responsive design
+ */
+img {
+    max-width: 100%;
+}
+
+
+@footerbordersinside: #3F4C4C;
+
+@media screen and (min-width: 891px) {
+    .navbar2 {
+        .column(9);
+    }
+
+    .profile {
+        display: none;
+    }
+}
+
+
+
+
+/** --------------------------------------------------------------
+ *  Specific for making pattern in theme Pattern.
+ */
+
+@tilescolor: #E5E5E5;
+
+body {
+    //border: 2px solid red;
+    //border-radius: 5px;
+    margin: auto;
+    max-width: 960px;
+    //box-shadow: 0 0 10px grey;
+
+
+    background-image: url(../img/tiles.png);
+    background-repeat: repeat;
+
+
+}
+
+
+// Header -----------------------------
+
+h1,
+.site-logo-text {
+    //text-shadow: 1px 1px grey;
+}
+
+.navbar2 {
+
+    a:link, a:visited {
+        background-color: @footerbackgroundcolor;
+        color: black;
+        padding: 4px 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        //box-shadow: 5px 5px 5px black;
+        border-radius: 3px;
+        margin-top: 3px;
+        margin-left: 3px;
+        width: 2em;
+        overflow: hidden;
+    }
+
+    a:hover {
+        //background-color: @footerbackgroundcolor;
+        background-color: @footerbackgroundcolor;
+        //box-shadow: 2px 2px 2px black;
+        margin-top: 3px;
+        margin-left: 3px;
+        border-radius: 3px;
+        text-decoration: none;
+        width: auto;
+
+    }
+
+    a:active {
+        background-color: @footerbackgroundcolor;
+        //box-shadow: 2px 2px 2px black;
+        margin-top: 3px;
+        margin-left: 3px;
+        border-radius: 3px;
+        text-decoration: none;
+        width: auto;
+
+
+    }
+
+    .selected,
+    .selected-parent {
+        a {
+            background-color: @footerbackgroundcolor;
+            //box-shadow: 2px 2px 2px black;
+            margin-top: 3px;
+            margin-left: 3px;
+            border-radius: 3px;
+            text-decoration: none;
+            width: auto;
+
+
+        }
+    }
+
+    .rm-desktop{
+        li {
+            a:hover,
+            &current-menu-item {
+                background-color: @footerbackgroundcolor;
+                text-decoration: none;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+.main {
+    img {
+        //padding: 5px;
+        //box-shadow: 0 0 2px black;
+
+        &.rotateleft {
+            //-ms-transform: rotate(7deg); /* IE 9 */
+            //-webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+            //transform: rotate(7deg);
+        }
+
+        &.rotateright {
+            //-ms-transform: rotate(-7deg); /* IE 9 */
+            //-webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+            //transform: rotate(-7deg);
+        }
+    }
+
+    .figure {
+        //border: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Ta bort!
