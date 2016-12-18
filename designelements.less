@@ -1,0 +1,208 @@
+/**
+* Anax Flat theme.
+*/
+@import url(modules.less);
+
+// Style.LESS
+//@import url(style.less);
+
+
+
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+// Navbar main
+
+
+// Max menu
+@maxButtonFontSize: 2em;
+
+/*.rm-max {
+    &.rm-navbar {
+        right: ((@gridSystemWidth * 4) / @columnWidth);
+    }
+}*/
+
+
+/** --------------------------------------------------------------
+ *  Logo images
+ */
+.logo-1 {
+    position: absolute;
+    top: 70px;
+    left: -140px;
+}
+
+.site-logo-text-icon {
+    img {
+        vertical-align: bottom;
+    }
+}
+
+
+
+/** --------------------------------------------------------------
+ *  Responsive design
+ */
+img {
+    max-width: 100%;
+}
+
+
+@footerbordersinside: #3F4C4C;
+
+
+
+@media screen and (min-width: 891px) {
+    .navbar2 {
+        .column(9);
+    }
+
+    .profile {
+        display: none;
+    }
+}
+
+
+html.design1 {
+    body {
+        //border-radius: 5px;
+        //margin: auto;
+        //max-width: 960px;
+        //box-shadow: 0 0 10px grey;
+
+        .outer-wrap-header {
+            background-image: url("../img/utsikt.jpg");
+            background-position: center center;
+
+            height: 22em;
+        }
+
+
+        .flash-wrap {
+            display: none;
+        }
+
+        .outer-wrap-after-main {
+            background-image: url("../img/utsikt.jpg");
+            background-position: 25% 55%;
+        }
+
+        .inner-wrap {
+            max-width: none;
+        }
+
+        .inner-wrap-header,
+        .inner-wrap-flash,
+        .inner-wrap-breadcrumb,
+        .inner-wrap-main,
+        .inner-wrap-after-main,
+        .inner-wrap-footer {
+            max-width: 960px;
+        }
+
+
+        .outer-wrap-footer {
+            background-color: @footerbackgroundcolor;
+        }
+
+    }
+}
+
+
+
+
+html.design2 {
+
+    @footerbordersinside: #0000C8;
+
+    body {
+        border-radius: 5px;
+        margin: auto;
+        max-width: 960px;
+        box-shadow: 0 0 10px rgba(0, 0, 200, 0.5);
+
+        .inner-wrap-header {
+            background-color:white;
+            background-image: linear-gradient(90deg, rgba(0,0,200,.5) 50%, transparent 50%),
+            linear-gradient(rgba(0,0,200,.5) 50%, transparent 50%);
+            background-size:50px 50px;
+
+            height: 21em;
+        }
+
+
+        .flash-wrap {
+            display: none;
+        }
+
+        &.route-theme-selector,
+        &.route-design-element,
+        &.route- {
+            .outer-wrap-main {
+                background-image: url("../img/utsikt.jpg");
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+
+
+        .main {
+            .article {
+                border: 2px solid rgba(0, 0, 200, 0.5);
+                border-radius: 5px;
+                padding: 5px;
+            }
+        }
+
+
+
+        .inner-wrap-after-main {
+            background-color:white;
+            background-image: linear-gradient(90deg, rgba(0,0,200,.5) 50%, transparent 50%),
+            linear-gradient(rgba(0,0,200,.5) 50%, transparent 50%);
+            background-size:50px 50px;
+        }
+
+        .footer-column-2,
+        .footer-column-3 {
+            border-left: 1px solid @footerbordersinside;
+        }
+
+        .site-footer {
+            border-top: 1px solid @footerbordersinside;
+        }
+
+
+        @media screen and (max-width: 710px) {
+            .footer-column-1,
+            .footer-column-2 {
+                border-bottom: 1px solid @footerbordersinside;
+            }
+
+            .footer-column-2,
+            .footer-column-3 {
+                border-left: none;
+            }
+        }
+    }
+}
+
+
+
+
+html.design3 {
+    body {
+        background: linear-gradient(red, yellow, blue);
+
+        .flash-wrap {
+            opacity: 0.4;
+        }
+
+        .inner-wrap-footer {
+            background: rgba(144, 144, 144, 0.5);
+        }
+    }
+}
